@@ -1,0 +1,97 @@
+<!-- Versionning --> 
+<!--
+    Page        : 'Page Contact'
+    Version     : '1.0.1'
+    Date        : '27.10.23'
+    Auteur      : 'MIS/MAL'
+    Description : 'Page Contact FORM'
+-->
+<!--
+ChangeLog  30.10.23 | 1.0.0 MAL : Création de la page formulaire de contact
+ChangeLog  30.10.23 | 1.0.7 MAL : Ajouter les informations sur le body
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://kit.fontawesome.com/d912260139.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap'rel="stylesheet">
+    <link rel="icon" href="../Images/favicon.png" type="image/png">
+    <title>Home - My Portfolio</title>
+</head>
+
+<body>
+
+
+    <header>
+      <div class="header">
+        <img src="../Images/logo2.png" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Presentation.html">Présentation</a>
+            <a href="Experiences.html">Expériences</a>
+            <a href="Loisirs.html">Loisirs</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Extra.html">Extra</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="right">
+        <img src="../Images/quote.png" alt="my Image" class="quote">
+      </div>
+      <div class="left-contact">
+        <h2>CONTACTEZ-MOI</h2>
+        <div class="form-container">
+          <form action="mailto:mohamed.alazawi@gri.ch" method="get">
+            <div class="radio-container">
+              <p>Genre :</p>
+              <input type="radio" name="sex" id="male" value="male" required>
+              <label for="male">Homme</label> &ensp;
+              <input type="radio" name="sex" id="female" value="female">
+              <label for="female">Femme</label>
+            </div>  
+            <div class="input-group">
+              <label for="firstname">Prénom:</label>
+              <input type="text" id="firstname" name="firstname" placeholder="votre prénom" required>
+            </div>
+            <div class="input-group">
+              <label for="lastname">Nom:</label>
+              <input type="text" id="lastname" name="lastname" placeholder="votre nom" required>
+            </div>
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input type="text" placeholder="votre email" required>
+            </div>        
+            <div class="input-group">
+              <label for="comment">Commentaire:</label>
+              <textarea id="comment" name="comment" rows="4" placeholder="commentaire" required></textarea>
+            </div>
+            <div class="checkbox">
+              <label for="confirmation">Je confirme que je suis majeur</label> &ensp;
+              <input type="checkbox" id="confirmation" name="confirmation" required>
+            </div>            
+            <div class="input-group">
+              <button type="submit">Envoyer</button>
+            </div>
+          </form>
+        </div>    
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="footer">
+        &copy; 2023 by Mohamed Al Azawi. All Rights Reserved.
+      </div>
+    </footer>
+</body>
+</html>
+

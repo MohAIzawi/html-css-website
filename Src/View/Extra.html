@@ -1,0 +1,75 @@
+<!-- Versionning --> 
+<!--
+    Page        : 'Extra'
+    Version     : '1.0.0'
+    Date        : '20.11.23'
+    Auteur      : 'MIS/MAL'
+    Description : 'Page jeu guess the number'
+-->
+<!--
+ChangeLog  20.11.23 | 1.0.0 MAL : Création de la page formulaire dela page extra
+ChangeLog  20.11.23 | 1.0.0 MAL : 
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://kit.fontawesome.com/d912260139.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap'rel="stylesheet">
+    <link rel="icon" href="../Images/logo2.png" type="image/png">
+    <link rel="icon" href="../Images/favicon.png" type="image/png">
+    <title>Home - My Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+      <div class="header">
+        <img src="../Images/logo2.png" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Presentation.html">Présentation</a>
+            <a href="Experiences.html">Expériences</a>
+            <a href="Loisirs.html">Loisirs</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Extra.html">Extra</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="right">
+        <img src="../Images/quote.png" alt="my Image" class="quote">
+      </div>
+      <div class="extra">
+        <h2>Number Guessing Game</h2>
+        <h6>Enter the minimum and maximum values:</h6>
+        <input type="number" id="Min" placeholder="Min">
+        <input type="number" id="Max" placeholder="Max">
+        <button onclick="startGame()">Start Game</button>
+        <div id="gameArea" style="display: none;">
+          <h5>Guess a number between &nbsp<span id="valMin"></span>&nbsp and &nbsp<span id="valMax"></span></h5>
+            <input type="number" id="guess">
+            <button onclick="submitGuess()">Submit Guess</button>
+            <h5 id="feedback"></h5>
+            <h5 id="guessHistory"></h5>
+        </div>
+      </div>
+    </div>
+
+    <script src="../JS/GuessNumber.js"></script>
+
+    <footer>
+      <div class="footer">
+        &copy; 2023 by Mohamed Al Azawi. All Rights Reserved.
+      </div>
+    </footer>
+</body>
+</html>
+

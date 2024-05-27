@@ -1,0 +1,83 @@
+<!-- Versionning --> 
+<!--
+    Page        : 'Page Contact'
+    Version     : '1.0.1'
+    Date        : '26.10.23'
+    Auteur      : 'MIS/MAL'
+    Description : 'Page Contact FORM'
+-->
+<!--
+ChangeLog  26.10.23 | 1.0.0 MAL : Création de la page formulaire de contact
+ChangeLog  27.10.23 | 1.0.7 MAL : Ajouter les informations sur le body
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d912260139.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap'rel="stylesheet">
+    <title>Home - My Portfolio</title>
+</head>
+
+<body>
+
+
+    <header>
+      <div class="header">
+        <img src="./images/logo2.PNG" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="présentation.html">Présentation</a>
+            <a href="éxperiences.html">Expériences</a>
+            <a href="loisirs.html">Loisirs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="right">
+        <p>une citation</p>
+      </div>
+      <div class="left-contact">
+        <h2>CONTACT</h2>
+        <div class="form-container">
+          <form action="/submit_contact" method="post">
+              <div class="input-group">
+                  <label for="firstname">First Name:</label>
+                  <input type="text" id="firstname" name="firstname" required>
+              </div>
+              <div class="input-group">
+                  <label for="lastname">Last Name:</label>
+                  <input type="text" id="lastname" name="lastname" required>
+              </div>
+              <div class="input-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="input-group">
+                  <label for="comment">Comment:</label>
+                  <textarea id="comment" name="comment" rows="4" required></textarea>
+              </div>
+              <div class="input-group">
+                  <button type="submit">Submit</button>
+              </div>
+        </div>    
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="footer">
+        &copy; 2023 by Mohamed Al Azawi. All Rights Reserved.
+      </div>
+    </footer>
+</body>
+</html>
+

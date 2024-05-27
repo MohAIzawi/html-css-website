@@ -1,0 +1,491 @@
+/* MAIN */
+
+*{
+  box-sizing: border-box;
+  margin: 0; /* enlever les paramètres par défault du navigateur */
+  padding: 0; /* enlever les paramètres par défault du navigateur */
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: large;
+  box-sizing: border-box; /*inclus padding, margin avec le contenu */
+  background-image: url('../Images/background.jpg');
+  background-size: cover;  /* couvre tout le contenu de la page */ 
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: auto;
+  min-height: 100vh; /* responsive */
+  width: 100vw; /* responsive */
+}
+
+a {
+  text-decoration: none; 
+}
+
+.content p {
+  text-align: justify;
+  width: 50%;
+}
+
+/* header - menu */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  opacity: 80%;
+  background-color: black; 
+  color: white;
+}
+
+.header a {
+  color: white;
+  padding: 0.7em 1em; 
+  font-size: 1.2em;  
+}
+
+.header a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.logo {
+  max-width: 100px; 
+  height: auto;
+}
+
+/* footer */
+
+.footer {
+  opacity: 80%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer2 {
+  opacity: 80%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1%;
+  bottom: 0;
+  width: 100%;
+}
+
+/* general page content */
+
+.content {
+  color: #fff;
+  margin: 5%;
+  padding: 3%;
+  font-size: x-large;
+}
+
+.home-image {
+  max-width: 20em;
+  height: 20em;
+  margin-left: 6em;
+  border-radius: 5%;
+  object-fit: cover;
+  box-shadow: 0 -10px 20px 20px rgb(0, 217, 240);
+}
+
+.right{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  float:right;
+  width: 50%;
+  height: auto;
+}
+
+.left{
+  margin-left: 20%;
+  justify-content: center;
+  float:center;
+  width: 50%;
+  height: auto;
+}
+
+/* BUTTON */
+
+.button {
+  font-family: 'Saira Condensed', sans-serif;
+  background-color: white;
+  color: black;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: transform 0.5s ease; /* transition et vitesse */
+}
+
+.button:hover {
+  transform: scale(1.3); /* taille boutton quand on passe dessus */
+}
+
+/* Social icons */
+
+.social-icons {
+  margin-top: 0.2em; 
+  margin-left: 3em;
+  text-align: center; /* Centrer les icones horizentalement */
+  font-size: 2em; /* taille des icones */
+}
+
+.social-icons i {
+  margin: 0.2em; 
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.social-icons i:hover {
+  color: #fff;
+  transform: scale(1.3);
+}
+
+/* Loisirs icons */
+
+.loisirs-icons {
+  text-align: center; /* Centrer les icones horizentalement */
+  font-size: 2em; /* taille des icones */
+  background-color: white;
+  border-radius: 0.3em;
+  max-width: 40%;
+}
+
+.loisirs-icons i {
+  margin: 0.6em; 
+  color: black;
+  transition: transform 0.4s ease;
+}
+
+.loisirs-icons i:hover {
+  color: black;
+  transform: scale(1.5);
+}
+
+/* EXP PRO */
+
+.resume-section {
+  width: 100%;
+  margin-left: -4.2em;
+}
+
+.year-title {
+  font-weight: bold;
+  margin: 1em 0;
+  display: inline-block;
+  text-decoration: none; /* To ensure no underline */
+}
+
+.job-title {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.work {
+  border: none;
+  box-shadow: 0 -19px 50px 50px rgba(123, 177, 213, 0.7);
+  border-radius: 50%;
+}
+
+.quote {
+  margin-top: 3em; /* Space above the icons */
+  margin-left: 7em;
+  text-align: center; /* Center the icons horizontally */
+}
+
+/* images */
+
+.carousel {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  gap: 0.5em;  /* space between images */
+  overflow: auto; /* In case images overflow container, it will be scrollable */
+}
+
+.carousel img {
+  width: 9em;  
+  height: 9em; 
+  object-fit: cover;
+  transition: transform 0.8s ease; /* Smooth transition for the transform */
+}
+
+.carousel-pc {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  gap: 0.5em;  /* space between images */
+  overflow: auto; /* In case images overflow container, it will be scrollable */
+}
+
+.carousel-pc img {
+  width: 9em;  
+  height: 9em; 
+  object-fit: cover;
+  transition: transform 0.8s ease; /* Smooth transition for the transform */
+}
+
+/* Apply the hover effect directly to the img tags */
+.carousel img:hover {
+  transform: scale(1.5); /* Enlarges the image on hover */
+}
+
+.carousel-pc img:hover {
+  transform: scale(1.5);
+}
+
+.carousel img.fit,
+.carousel img.basket,
+.carousel img.run1,
+.carousel img.run2 {
+  object-position: top;  /* recentrer ces photos au milieu du cover */
+}
+
+/* Formulaire */
+
+.left-contact {
+  margin-right: 10%;
+  margin-top: -7%;
+}
+
+.form-container {
+  background-color: white;
+  padding: 1%; /* inside */
+  border-radius: 0.3em;
+  max-width: 50%;
+  color: #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 0.2em;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.2em;
+  color: #000; 
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #000; /* Text color for inputs */
+}
+
+button[type="submit"] {
+  background-color: #004b9b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.radio-container {
+  display: inline-block;
+  margin-right: 10px; 
+}
+
+.checkbox {
+  display: inline-block;
+  margin-right: 10px;
+  color: #000;
+}
+
+/* EXTRA */
+
+.extra {
+  text-align: center;
+  background-color: white;
+  padding: 1%;
+  border-radius: 0.3em;
+  max-width: 40%;
+  color: #000;
+}
+
+.extra input[type="number"] {
+  text-align: center;
+  font-size: 1em;
+  width: 20%; 
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.extra button {
+  font-size: 1em;
+  width: 30%;
+  color: white;
+  padding: 5px;
+  background-color: #615f5f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+.extra button:hover {
+  background-color: #0a3b4c;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .header a {
+    display: block;
+    margin-bottom: 10px; /* ajouter de l'éspace entre les éléments */
+  }
+
+  .content, .right, .left {
+    width: 100%; 
+    margin: 0;
+    padding: 10px; 
+    text-align: center; 
+  }
+
+  .content p {
+    width: 100%; /* largeur max pour les paragraphes */
+    text-align: center;
+  }
+
+  .work {
+    width: 70%;
+    height: 70%;
+  }
+
+  .footer {
+    padding: 10px; /* reduire padding */
+    position: relative; 
+  }
+
+  .social-icons {
+    margin-right: 3em;
+    font-size: 1.5em; /* Adjuster taille icones */
+  }
+
+  .button {
+    width: 100%; 
+    padding: 10px; /* augmenter le padding pour le touché */
+    margin-bottom: 6em;
+  }
+
+  .home-image {
+    max-width: 100%; /* images largeur max */
+    height: auto; /* Maintenir l'aspect ratio */
+    margin-left: 0; /* enlver le margin-left */
+  }
+
+  .carousel img {
+    max-width: 100%; /* images largeur max */
+    height: auto; /* Maintenir l'aspect ratio */
+    margin-left: 0; /* enlver le margin-left */
+  }
+
+  .resume-section {
+    margin-bottom: 2em;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 4em;
+  }
+
+  .loisirs-icons {
+    width: 200%;
+    margin-left: 0; /* enlver le margin-left */
+    text-align: center;
+    font-size: 1.5em; /* taille des icones */
+    max-width: 100%;
+  }
+
+  .resume-section {
+    width: 100%; 
+    margin-left: 0; /* enlver le margin-left */
+    text-align: center;
+  }
+
+  .quote {
+    margin: 10px; /* Ajuster marge de la citation */
+  }
+
+  ul {
+    padding-left: 0.5em; /* moins de padding pour les listes */
+  }
+
+  .left-contact {
+    margin-right: 0;
+    margin-top: 10%;
+  }
+
+  .carousel-pc {
+    margin-bottom: 3em;
+    max-width: 100%; /* images largeur max */
+    height: auto; /* Maintenir l'aspect ratio */
+    margin-left: 0; /* enlver le margin-left */
+  }
+
+  .extra {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10em;
+    text-align: center;
+    margin-bottom: 4em;
+  }
+
+  .extra button {
+    font-size: 1em;
+    width: 40%; /* ajuster por le responsive */
+    color: white;
+    padding: 5px;
+    background-color: #615f5f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  }
+
+}
